@@ -1,0 +1,61 @@
+.Form {
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.85);
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3%;
+    border: 10px solid #c71585;
+}
+
+.Form input {
+    padding: 2%;
+    width: 50%;
+    border-radius: 2rem;
+    border: 1px solid #f2f2f2;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.Form button {
+    padding: 2%;
+    width: 20%;
+    border-radius: 1rem;
+    border: 1px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    background: mediumvioletred;
+}
+
+select {
+    padding: 2%;
+    width: 50%;
+    border-radius: 2rem;
+    border: 1px solid #f2f2f2;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+textarea {
+    padding: 2%;
+    width: 50%;
+    border-radius: 2rem;
+    border: 1px solid #f2f2f2;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.Error {
+    padding: 2%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.Padding {
+    padding: 2%;
+}

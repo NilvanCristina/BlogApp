@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "history": "^5.1.0",
     "react-router-dom": "^6.0.2"
   }
 }
