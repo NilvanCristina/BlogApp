@@ -13,7 +13,7 @@ function Contact() {
 
     const [errorMessage, setErrorMessage] = useState("");
 
-    let history = createBrowserHistory({ forceRefresh:true });
+    let history = createBrowserHistory();
 
     function handleSubmit() {
 
@@ -28,7 +28,6 @@ function Contact() {
 
     return (
         <div>
-            <div className="Padding"/>
             <div className="Padding"/>
 
             <div className="Form">
@@ -45,6 +44,7 @@ function Contact() {
 
                 <select onChange = { event => setSubject(event.target.value) }>
 
+                    <option value="">Subject</option>
                     <option value="Collaboration">Collaboration</option>
                     <option value="Meeting">Meeting</option>
                     <option value="Consultancy">Consultancy</option>
