@@ -1,0 +1,35 @@
+.Navbar {
+    width: 100%;
+    height: 50px;
+    background-color: mediumvioletred;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.TopLeft {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.TopCenter {
+    flex: 6;
+}
+
+.TopList {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.TopListItem {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}

@@ -1,12 +1,13 @@
 import React from 'react';
 import Footer from "../../components/Footer/Footer";
 import './Home.css';
+import Navbar from "../../components/Navbar/Navbar";
 
 function Home() {
 
     return (
         <div>
-            <p>Home</p>
+            <Navbar />
             <Footer />
         </div>
     )
