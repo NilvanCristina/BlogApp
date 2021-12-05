@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <div className="Navbar">
             <div className="TopLeft">
-                Blog
+                <h4>Blog</h4>
             </div>
 
             <div className="TopCenter">
@@ -15,10 +15,6 @@ function Navbar() {
                     <li className="TopListItem">Contact</li>
                     <li className="TopListItem">Newsletter</li>
                 </ul>
-            </div>
-
-            <div className="TopRight">
-
             </div>
         </div>
     )
