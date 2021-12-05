@@ -1,4 +1,4 @@
-.Form {
+.ContactForm {
     padding: 2%;
     background: rgba(0, 0, 0, 0.85);
     width: 40%;
@@ -8,7 +8,7 @@
     border: 10px solid #c71585;
 }
 
-.Form input {
+.ContactForm input {
     padding: 2%;
     width: 50%;
     border-radius: 2rem;
@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-.Form button {
+.ContactForm button {
     padding: 2%;
     width: 20%;
     border-radius: 1rem;
