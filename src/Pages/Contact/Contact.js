@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { createBrowserHistory } from 'history';
 import './Contact.css'
 import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Contact() {
     const [firstName, setFirstName] = useState("");
@@ -28,6 +29,8 @@ function Contact() {
 
     return (
         <div>
+            <Navbar />
+
             <div className="Padding"/>
 
             <div className="ContactForm">

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { createBrowserHistory } from 'history';
 import './Newsletter.css'
 import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 
 
 function Newsletter() {
@@ -23,6 +24,8 @@ function Newsletter() {
 
     return (
         <div>
+            <Navbar />
+
             <div className="Padding"/>
 
             <div className="NewsletterForm">
