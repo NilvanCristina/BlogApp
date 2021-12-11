@@ -28,7 +28,7 @@ function Newsletter() {
 
             <div className="Padding"/>
 
-            <div className="NewsletterForm">
+            <div className="Form">
                 <h1>Subscribe to our newsletter!</h1>
 
                 <input type="email" placeholder="email@example.com" onChange={ event => setEmail(event.target.value) }/>

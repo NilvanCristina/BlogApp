@@ -33,7 +33,7 @@ function Contact() {
 
             <div className="Padding"/>
 
-            <div className="ContactForm">
+            <div className="Form">
                 <h1>Contact us!</h1>
 
                 <input type="text" placeholder="First name" onChange={ event => setFirstName(event.target.value) }/>

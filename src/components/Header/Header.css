@@ -19,7 +19,7 @@
     font-family: 'Baloo Bhaijaan 2', cursive;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
 
     .HeaderTitle {
         justify-content: center;
@@ -27,6 +27,30 @@
     }
 
     .HeaderTitle h3 {
+        margin-top: 66%;
         font-size: 50px;
+    }
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 550px) {
+    .HeaderTitle h3 {
+        margin-top: 48%;
+        margin-left: 30%;
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-device-width: 770px) {
+    .HeaderTitle h3 {
+        margin-top: 30%;
+        font-size: 60px;
+        margin-left: 4%;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-device-width: 1300px) {
+    .HeaderTitle h3 {
+        margin-top: 23%;
+        font-size: 70px;
     }
 }
