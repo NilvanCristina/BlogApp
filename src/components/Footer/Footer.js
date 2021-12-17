@@ -5,7 +5,7 @@ function Footer() {
 
     return (
         <footer>
-            <p>Copyright Cristina</p>
+            <p>Discover the IT zone with us!</p>
         </footer>
     )
 }

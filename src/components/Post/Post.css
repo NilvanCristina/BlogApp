@@ -1,0 +1,15 @@
+.Posts {
+    text-align: center;
+}
+
+.Post {
+    margin-top: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+    border: 10px solid #c71585;
+}
+
+.Post text {
+    padding: 2%;
+}
