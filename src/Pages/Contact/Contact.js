@@ -3,27 +3,30 @@ import { createBrowserHistory } from 'history';
 import './Contact.css'
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import {asyncHandleContact} from "../../utils/ApiCalls";
 
 function Contact() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
+    const [first_name, setFirstName] = useState("");
+    const [last_name, setLastName] = useState("");
     const [email, setEmail] = useState("");
-
-    const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
 
     const [errorMessage, setErrorMessage] = useState("");
 
     let history = createBrowserHistory();
 
-    function handleSubmit() {
+    function handleContact() {
 
-        if (firstName === '' || lastName === '' || email === '' || subject === '' || message === '')
+        if (first_name === '' || last_name === '' || email === '' || message === '')
             setErrorMessage("Unable to process empty fields");
 
-        if (firstName !== '' && lastName !== '' && email !== '' && subject !== '' && message !== '') {
-            history.push('/');
-            history.go('/');
+        if (first_name !== '' && last_name !== '' && email !== '' && message !== '') {
+
+            asyncHandleContact(first_name, last_name, email, message).then(() => {
+                setErrorMessage("");
+                history.push('/');
+                history.go('/');
+            })
         }
     }
 
@@ -45,24 +48,13 @@ function Contact() {
                 <input type="email" placeholder="email@example.com" onChange={ event => setEmail(event.target.value) }/>
                 <div className="Padding"/>
 
-                <select onChange = { event => setSubject(event.target.value) }>
-
-                    <option value="">Subject</option>
-                    <option value="Collaboration">Collaboration</option>
-                    <option value="Meeting">Meeting</option>
-                    <option value="Consultancy">Consultancy</option>
-                    <option value="Gratitude">Gratitude</option>
-
-                </select>
-                <div className="Padding"/>
-
                 <textarea rows="4" placeholder="Message" onChange = { event => setMessage(event.target.value) }/>
                 <div className="Padding"/>
 
                 { errorMessage && <div className="Error"><b>{ errorMessage }</b></div> }
                 <div className="Padding"/>
 
-                <button type="submit" className="Active" onClick = { handleSubmit }>Send</button>
+                <button type="submit" className="Active" onClick = { handleContact }>Send</button>
             </div>
 
             <div className="Padding"/>

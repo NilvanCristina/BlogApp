@@ -3,22 +3,27 @@ import { createBrowserHistory } from 'history';
 import './Newsletter.css'
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
+import {asyncHandleNewsletter} from "../../utils/ApiCalls";
 
 
 function Newsletter() {
-    const [email, setEmail] = useState("");
+    const [user_email, setUserEmail] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
 
     let history = createBrowserHistory();
 
-    function handleSubmit() {
+    function handleNewsletter() {
 
-        if (email === '')
+        if (user_email === '')
             setErrorMessage("Unable to process empty fields");
 
-        if (email !== '') {
-            history.push('/');
-            history.go('/');
+        if (user_email !== '') {
+
+            asyncHandleNewsletter(user_email).then(() => {
+                setErrorMessage("");
+                history.push('/');
+                history.go('/');
+            });
         }
     }
 
@@ -31,13 +36,13 @@ function Newsletter() {
             <div className="Form">
                 <h1>Subscribe to our newsletter!</h1>
 
-                <input type="email" placeholder="email@example.com" onChange={ event => setEmail(event.target.value) }/>
+                <input type="email" placeholder="email@example.com" onChange={ event => setUserEmail(event.target.value) }/>
                 <div className="Padding"/>
 
                 { errorMessage && <div className="Error"><b>{ errorMessage }</b></div> }
                 <div className="Padding"/>
 
-                <button type="submit" className="Active" onClick = { handleSubmit }>Send</button>
+                <button type="submit" className="Active" onClick = { handleNewsletter }>Send</button>
             </div>
 
             <div className="Padding"/>

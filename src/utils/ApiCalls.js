@@ -11,9 +11,7 @@ const useCustomFetchDataBlogUrl = () => {
     return { isLoadingBlogUrl, serverErrorBlogUrl, apiDataBlogUrl }
 }
 
-export default useCustomFetchDataBlogUrl;
-
-export async function asyncHandleContact(first_name, last_name, email, subject, message) {
+export async function asyncHandleContact(first_name, last_name, email, message) {
 
     try {
         const request = await fetch(urlRequests.fetchDataContactUrl, {
@@ -25,7 +23,6 @@ export async function asyncHandleContact(first_name, last_name, email, subject, 
                 first_name,
                 last_name,
                 email,
-                subject,
                 message
             }),
         });
@@ -38,7 +35,7 @@ export async function asyncHandleContact(first_name, last_name, email, subject, 
     }
 }
 
-export async function asyncHandleEmail(email) {
+export async function asyncHandleNewsletter(user_email) {
 
     try {
         const request = await fetch(urlRequests.fetchDataNewsletterUrl, {
@@ -47,7 +44,7 @@ export async function asyncHandleEmail(email) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                email,
+                user_email,
             }),
         });
 
@@ -58,3 +55,7 @@ export async function asyncHandleEmail(email) {
         throw new Error(error);
     }
 }
+
+export {
+    useCustomFetchDataBlogUrl
+};
