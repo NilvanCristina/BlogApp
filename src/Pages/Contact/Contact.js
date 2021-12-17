@@ -18,7 +18,7 @@ function Contact() {
     function handleContact() {
 
         if (first_name === '' || last_name === '' || email === '' || message === '')
-            setErrorMessage("Unable to process empty fields");
+            setErrorMessage("Unable to process empty fields!");
 
         if (first_name !== '' && last_name !== '' && email !== '' && message !== '') {
 

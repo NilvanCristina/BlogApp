@@ -15,7 +15,7 @@ function Newsletter() {
     function handleNewsletter() {
 
         if (user_email === '')
-            setErrorMessage("Unable to process empty fields");
+            setErrorMessage("Unable to process empty fields!");
 
         if (user_email !== '') {
 

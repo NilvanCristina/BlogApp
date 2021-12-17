@@ -2,7 +2,7 @@ const baseUrl = 'http://localhost:8000';
 
 const urlRequests = {
     fetchDataBlogUrl: `${baseUrl}/blog`,
-    fetchDataContactUrl: `${baseUrl}/contact/contact_data`,
+    fetchDataContactUrl: `${baseUrl}/contact/data`,
     fetchDataNewsletterUrl: `${baseUrl}/newsletter/data`,
 }
 
