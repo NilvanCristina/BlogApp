@@ -1,20 +1,29 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './Post.css'
-import useFetch from "react-fetch-hook";
+import { useCustomFetchDataBlogUrl } from "../../utils/ApiCalls";
 
 function Post() {
-    const { isLoading, error, data } = useFetch("http://localhost:8000/blog/");
+    const { serverErrorBlogUrl, apiDataBlogUrl } = useCustomFetchDataBlogUrl();
 
-    if (isLoading)
-        return "Loading...";
+    const [apiData, setApiData] = useState([]);
 
-    if (error)
-        return "Error!";
+    useEffect(() => {
+       if (apiDataBlogUrl)
+           setApiData(apiDataBlogUrl);
+    }, [apiDataBlogUrl]);
+
+    useEffect(() => {
+        if (serverErrorBlogUrl)
+            throw Error("Error when fetching data");
+
+    }, [serverErrorBlogUrl]);
+
+    console.log(apiData);
 
     return (
         <div className="Posts">
             <ul>
-                { data.map((item) => (
+                { apiData.map((item) => (
                     <div className="Post">
                         <br/>
                         { item.title }

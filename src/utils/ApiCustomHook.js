@@ -18,7 +18,7 @@ const useCustomFetch = (url) => {
                 });
 
                 const data = await request.json();
-                console.log(data);
+
                 setData(data);
                 setIsLoading(false);
 
