@@ -1,16 +1,14 @@
 .Page {
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .Form {
     padding: 2%;
     background: rgba(0, 0, 0, 0.85);
     width: 40%;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 3%;
+    margin: 0 auto;
+    border-radius: 5px;
     border: 10px solid #c71585;
     text-align: center;
 }
