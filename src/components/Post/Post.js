@@ -29,9 +29,6 @@ function Post() {
                         { item.title }
                         <br/>
                         <br/>
-                        { item.description }
-                        <br/>
-                        <br/>
                         { item.content }
                         <br/>
                         <br/>
